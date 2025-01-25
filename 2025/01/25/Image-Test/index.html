@@ -20,20 +20,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="测试图片插入hexo &amp; Typora 实现图片插入一、问题引出使用hexo框架结合github搭建Blog网站，在本地使用Typora写md文档，在hexo s本地部署和hexo d上传到Github使图片无法正常显示。 原因： 将图片复制到Typora编辑器的md文档中时，图片保存在一个绝对路径的文件夹下，如图所示：    展现在网络上的Blog（无论是本地还是Github）不是md文">
+  <meta name="description" content="测试图片插入hexo &amp; Typora 实现图片插入一、问题引出使用hexo框架结合github搭建Blog网站，在本地使用Typora写md文档，在hexo s本地部署和hexo d上传到Github使图片无法正常显示。 原因： 将图片复制到Typora编辑器的md文档中时，图片保存在一个绝对路径的文件夹下，如图所示：   展现在网络上的Blog（无论是本地还是Github）不是md文件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Image_Test">
 <meta property="og:url" content="http://example.com/2025/01/25/Image-Test/index.html">
 <meta property="og:site_name" content="初来乍到，一无所知">
-<meta property="og:description" content="测试图片插入hexo &amp; Typora 实现图片插入一、问题引出使用hexo框架结合github搭建Blog网站，在本地使用Typora写md文档，在hexo s本地部署和hexo d上传到Github使图片无法正常显示。 原因： 将图片复制到Typora编辑器的md文档中时，图片保存在一个绝对路径的文件夹下，如图所示：    展现在网络上的Blog（无论是本地还是Github）不是md文">
+<meta property="og:description" content="测试图片插入hexo &amp; Typora 实现图片插入一、问题引出使用hexo框架结合github搭建Blog网站，在本地使用Typora写md文档，在hexo s本地部署和hexo d上传到Github使图片无法正常显示。 原因： 将图片复制到Typora编辑器的md文档中时，图片保存在一个绝对路径的文件夹下，如图所示：   展现在网络上的Blog（无论是本地还是Github）不是md文件">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2025/01/25/Image-Test/image-20250125230121349.png">
 <meta property="og:image" content="http://example.com/2025/01/25/Image-Test/image-20250125224822189.png">
 <meta property="og:image" content="http://example.com/2025/01/25/Image-Test/image-20250125201720433.png">
 <meta property="og:image" content="http://example.com/2025/01/25/Image-Test/image-20250125201645033.png">
 <meta property="og:image" content="http://example.com/2025/01/25/Image-Test/image-20250125225041063.png">
+<meta property="og:image" content="http://example.com/2025/01/25/Image-Test/image-20250125233713906.png">
 <meta property="article:published_time" content="2025-01-25T09:44:23.000Z">
-<meta property="article:modified_time" content="2025-01-25T15:22:24.406Z">
+<meta property="article:modified_time" content="2025-01-25T15:52:32.377Z">
 <meta property="article:author" content="Shiryn">
 <meta property="article:tag" content="测试">
 <meta name="twitter:card" content="summary">
@@ -196,7 +197,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2025-01-25 17:44:23 / 修改时间：23:22:24" itemprop="dateCreated datePublished" datetime="2025-01-25T17:44:23+08:00">2025-01-25</time>
+              <time title="创建时间：2025-01-25 17:44:23 / 修改时间：23:52:32" itemprop="dateCreated datePublished" datetime="2025-01-25T17:44:23+08:00">2025-01-25</time>
             </span>
 
           
@@ -214,11 +215,9 @@
 <h5 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h5><ol>
 <li><p>将图片复制到Typora编辑器的md文档中时，图片保存在一个绝对路径的文件夹下，如图所示：</p>
 <img src="/2025/01/25/Image-Test/image-20250125230121349.png" class="" title="image-20250125230121349">
-
-<ol start="2">
-<li>展现在网络上的Blog（无论是本地还是Github）不是md文件而是html文件，图片引用需要从md语言转换到html语言。</li>
-</ol>
 </li>
+<li><p>展现在网络上的Blog（无论是本地还是Github）不是md文件而是html文件，图片引用需要从md语言转换到html语言，在运行hexo g时hexo框架将图片引用转化为html语言时无法识别md图片引用语言，而是hexo专属的引用方式：（需要通过插件实现图片应用格式的自动转换）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img example.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="二、实现效果："><a href="#二、实现效果：" class="headerlink" title="二、实现效果："></a>二、实现效果：</h3><p>实现图片在Typora、本地和Github都可以正常显示</p>
 <ol>
@@ -246,7 +245,7 @@
 
 <p>此时，在.&#x2F;source&#x2F;_posts路径下，会新建一个xxx的md文件和一个xxx的文件夹，xxx文件夹用来储存图片。</p>
 </li>
-<li><p>使用Typora打开md文件。</p>
+<li><p>使用Typora打开md文件开始写作。</p>
 </li>
 </ol>
 </li>
@@ -265,13 +264,33 @@
 <ol start="3">
 <li><strong>安装hexo插件</strong></li>
 </ol>
-<p>由于在网络上的图片引用需要从md语言转换到html语言，即：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<p>需要从md图片应用方式转换到hexo图片应用方式，即：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img image-20250125225041063.png image-20250125225041063 %&#125; -&gt; &#123;% image-20250125225041063.png image-20250125225041063 %&#125;</span><br></pre></td></tr></table></figure>
 
 <p>在博客文件夹下启动命令行，下载插件hexo-asset-img</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-img --save</span><br></pre></td></tr></table></figure>
 
 <p><font color='red'>！！！注意不是hexo-asset-image，如果下载插件错误，使用npm uninstall hexo-asset-image卸载插件！！！</font></p>
+<p>检查是否下载成功，在博客根目录启动命令行输入以下命令，查看是否有hexo-asset-img</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list</span><br></pre></td></tr></table></figure>
+
+<img src="/2025/01/25/Image-Test/image-20250125233713906.png" class="" title="image-20250125233713906">
+
+<h4 id="四、正确操作"><a href="#四、正确操作" class="headerlink" title="四、正确操作"></a>四、正确操作</h4><p>在完成上述设置后，写博文的正确操作：</p>
+<ol>
+<li><p>hexo new xxx 新建一个新的博文，此时hexo会在.&#x2F;source&#x2F;_posts路径下创建同名的文件夹和md文件，使用Typora打开md文件</p>
+</li>
+<li><p>将图片粘贴在md文件中时，Typora会在同名文件夹中储存该图片，而且在Typora中的图片引用语法应该为以下格式</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset<span class="emphasis">_img image-20250125225041063.png image-20250125225041063 %&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>写完文章运行hexo g，hexo-assit-img插件会自动将md图片引用语言转化为hexo识别的语言，并转化为html语言，在根目录.&#x2F;public&#x2F;index.html文件中可以看到图片对应的引用语言：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;/2025/01/25/Image-Test/image-20250125225041063.png&quot; class=&quot;&quot; title=&quot;image-20250125225041063&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行hexo s本地调试，图片可以正常显示</p>
+</li>
+<li><p>运行hexo d上传到github，图片可以正常显示</p>
+</li>
+</ol>
 
     </div>
 
@@ -352,7 +371,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5"><span class="nav-number">1.</span> <span class="nav-text">测试图片插入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-Typora-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5"><span class="nav-number">1.1.</span> <span class="nav-text">hexo &amp; Typora 实现图片插入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%97%AE%E9%A2%98%E5%BC%95%E5%87%BA"><span class="nav-number">1.1.1.</span> <span class="nav-text">一、问题引出</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8E%9F%E5%9B%A0%EF%BC%9A"><span class="nav-number">1.1.1.0.1.</span> <span class="nav-text">原因：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C%EF%BC%9A"><span class="nav-number">1.1.2.</span> <span class="nav-text">二、实现效果：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.3.</span> <span class="nav-text">三、实现方式</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5"><span class="nav-number">1.</span> <span class="nav-text">测试图片插入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-Typora-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5"><span class="nav-number">1.1.</span> <span class="nav-text">hexo &amp; Typora 实现图片插入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%97%AE%E9%A2%98%E5%BC%95%E5%87%BA"><span class="nav-number">1.1.1.</span> <span class="nav-text">一、问题引出</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8E%9F%E5%9B%A0%EF%BC%9A"><span class="nav-number">1.1.1.0.1.</span> <span class="nav-text">原因：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C%EF%BC%9A"><span class="nav-number">1.1.2.</span> <span class="nav-text">二、实现效果：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.3.</span> <span class="nav-text">三、实现方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%AD%A3%E7%A1%AE%E6%93%8D%E4%BD%9C"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">四、正确操作</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
