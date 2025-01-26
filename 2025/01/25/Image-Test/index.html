@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="测试图片插入：hexo &amp; Typora 实现图片插入一、问题引出使用hexo框架结合github搭建Blog网站，在本地使用Typora写md文档，在hexo s本地部署和hexo d上传到Github使图片无法正常显示。 原因：  将图片复制到Typora编辑器的md文档中时，图片保存在一个绝对路径的文件夹下，如图所示：   展现在网络上的Blog（无论是本地还是Github）不是md">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Image_Test">
+<meta property="og:url" content="http://example.com/2025/01/25/Image-Test/index.html">
+<meta property="og:site_name" content="初来乍到，一无所知">
+<meta property="og:description" content="测试图片插入：hexo &amp; Typora 实现图片插入一、问题引出使用hexo框架结合github搭建Blog网站，在本地使用Typora写md文档，在hexo s本地部署和hexo d上传到Github使图片无法正常显示。 原因：  将图片复制到Typora编辑器的md文档中时，图片保存在一个绝对路径的文件夹下，如图所示：   展现在网络上的Blog（无论是本地还是Github）不是md">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2025/01/25/Image-Test/image-20250125230121349.png">
+<meta property="og:image" content="http://example.com/2025/01/25/Image-Test/image-20250125224822189.png">
+<meta property="og:image" content="http://example.com/2025/01/25/Image-Test/image-20250125201720433.png">
+<meta property="og:image" content="http://example.com/2025/01/25/Image-Test/image-20250125201645033.png">
+<meta property="og:image" content="http://example.com/2025/01/25/Image-Test/image-20250125225041063.png">
+<meta property="og:image" content="http://example.com/2025/01/25/Image-Test/image-20250125233713906.png">
+<meta property="article:published_time" content="2025-01-25T09:44:23.000Z">
+<meta property="article:modified_time" content="2025-01-25T16:00:48.163Z">
+<meta property="article:author" content="Shiryn">
+<meta property="article:tag" content="测试">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2025/01/25/Image-Test/image-20250125230121349.png">
+
+<link rel="canonical" href="http://example.com/2025/01/25/Image-Test/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Image_Test | 初来乍到，一无所知</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">初来乍到，一无所知</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/25/Image-Test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/headshot.jpg">
+      <meta itemprop="name" content="Shiryn">
+      <meta itemprop="description" content="Fighting!">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="初来乍到，一无所知">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Image_Test
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-01-25 17:44:23" itemprop="dateCreated datePublished" datetime="2025-01-25T17:44:23+08:00">2025-01-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-01-26 00:00:48" itemprop="dateModified" datetime="2025-01-26T00:00:48+08:00">2025-01-26</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="测试图片插入：hexo-Typora-实现图片插入"><a href="#测试图片插入：hexo-Typora-实现图片插入" class="headerlink" title="测试图片插入：hexo &amp; Typora 实现图片插入"></a>测试图片插入：hexo &amp; Typora 实现图片插入</h1><h3 id="一、问题引出"><a href="#一、问题引出" class="headerlink" title="一、问题引出"></a>一、问题引出</h3><p>使用hexo框架结合github搭建Blog网站，在本地使用Typora写md文档，在hexo s本地部署和hexo d上传到Github使图片无法正常显示。</p>
+<p><strong>原因：</strong></p>
+<ol>
+<li><p>将图片复制到Typora编辑器的md文档中时，图片保存在一个绝对路径的文件夹下，如图所示：</p>
+<img src="/2025/01/25/Image-Test/image-20250125230121349.png" class="" title="image-20250125230121349">
+</li>
+<li><p>展现在网络上的Blog（无论是本地还是Github）不是md文件而是html文件，图片引用需要从md语言转换到html语言，在运行hexo g时hexo框架将图片引用转化为html语言时无法识别md图片引用语言，而是hexo专属的引用方式：（需要通过插件实现图片应用格式的自动转换）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img example.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="二、实现效果"><a href="#二、实现效果" class="headerlink" title="二、实现效果"></a>二、实现效果</h3><p>实现图片在Typora、本地和Github都可以正常显示</p>
+<ol>
+<li>Typora编辑器预览</li>
+</ol>
+<img src="/2025/01/25/Image-Test/image-20250125224822189.png" class="" title="image-20250125224822189">
+
+<ol start="2">
+<li><p>本地图片显示</p>
+<img src="/2025/01/25/Image-Test/image-20250125201720433.png" class="" title="image-20250125201720433">
+</li>
+<li><p>github图片显示</p>
+<img src="/2025/01/25/Image-Test/image-20250125201645033.png" class="" title="image-20250125201645033"></li>
+</ol>
+<h3 id="三、实现方式"><a href="#三、实现方式" class="headerlink" title="三、实现方式"></a>三、实现方式</h3><ol>
+<li><p><strong>配置hexo</strong></p>
+<ol>
+<li><p>将Blog根目录下的_config.yml文件中的 post_asset_folder选项改为true（注意冒号后面的空格）</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>创建一个新的文章，在blog根目录下启动命令行运行以下代码</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new xxx</span><br></pre></td></tr></table></figure>
+
+<p>此时，在.&#x2F;source&#x2F;_posts路径下，会新建一个xxx的md文件和一个xxx的文件夹，xxx文件夹用来储存图片。</p>
+</li>
+<li><p>使用Typora打开md文件开始写作。</p>
+</li>
+</ol>
+</li>
+<li><p><strong>配置Typora</strong>：设置Typora图片引用格式</p>
+</li>
+</ol>
+<img src="/2025/01/25/Image-Test/image-20250125225041063.png" class="" title="image-20250125225041063">
+
+<p>(1) <strong>设置指定路径</strong>.&#x2F;${filename}$ </p>
+<p>(2) 勾选<strong>优先使用相对路径</strong></p>
+<p>此时，将图片复制到Typora，在源代码下图片引用格式应为</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">！[<span class="string">图片名</span>](<span class="link">新建博文名称/图片名称.图片格式</span>)</span><br><span class="line">例如：</span><br><span class="line">&#123;% asset<span class="emphasis">_img image-20250125225041063.png image-20250125225041063 %&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="3">
+<li><strong>安装hexo插件</strong></li>
+</ol>
+<p>需要从md图片应用方式转换到hexo图片应用方式，即：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img image-20250125225041063.png image-20250125225041063 %&#125; -&gt; &#123;% image-20250125225041063.png image-20250125225041063 %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在博客文件夹下启动命令行，下载插件hexo-asset-img</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-img --save</span><br></pre></td></tr></table></figure>
+
+<p><font color='red'>！！！注意不是hexo-asset-image，如果下载插件错误，使用npm uninstall hexo-asset-image卸载插件！！！</font></p>
+<p>检查是否下载成功，在博客根目录启动命令行输入以下命令，查看是否有hexo-asset-img</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm list</span><br></pre></td></tr></table></figure>
+
+<img src="/2025/01/25/Image-Test/image-20250125233713906.png" class="" title="image-20250125233713906">
+
+<h3 id="四、正确操作"><a href="#四、正确操作" class="headerlink" title="四、正确操作"></a>四、正确操作</h3><p>在完成上述设置后，写博文的正确操作：</p>
+<ol>
+<li><p>hexo new xxx 新建一个新的博文，此时hexo会在.&#x2F;source&#x2F;_posts路径下创建同名的文件夹和md文件，使用Typora打开md文件</p>
+</li>
+<li><p>将图片粘贴在md文件中时，Typora会在同名文件夹中储存该图片，而且在Typora中的图片引用语法应该为以下格式</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% asset<span class="emphasis">_img image-20250125225041063.png image-20250125225041063 %&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>写完文章运行hexo g，hexo-assit-img插件会自动将md图片引用语言转化为hexo识别的语言，并转化为html语言，在根目录.&#x2F;public&#x2F;index.html文件中可以看到图片对应的引用语言：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;img src=&quot;/2025/01/25/Image-Test/image-20250125225041063.png&quot; class=&quot;&quot; title=&quot;image-20250125225041063&quot;&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行hexo s本地调试，图片可以正常显示</p>
+</li>
+<li><p>运行hexo d上传到github，图片可以正常显示</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag"># 测试</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/01/24/My-First-Blog/" rel="prev" title="My First Blog">
+      <i class="fa fa-chevron-left"></i> My First Blog
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%EF%BC%9Ahexo-Typora-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5"><span class="nav-number">1.</span> <span class="nav-text">测试图片插入：hexo &amp; Typora 实现图片插入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%97%AE%E9%A2%98%E5%BC%95%E5%87%BA"><span class="nav-number">1.0.1.</span> <span class="nav-text">一、问题引出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C"><span class="nav-number">1.0.2.</span> <span class="nav-text">二、实现效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="nav-number">1.0.3.</span> <span class="nav-text">三、实现方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%AD%A3%E7%A1%AE%E6%93%8D%E4%BD%9C"><span class="nav-number">1.0.4.</span> <span class="nav-text">四、正确操作</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Shiryn"
+      src="/uploads/headshot.jpg">
+  <p class="site-author-name" itemprop="name">Shiryn</p>
+  <div class="site-description" itemprop="description">Fighting!</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="/1261675565@qq.com" title="E-Mail → 1261675565@qq.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/Shirynl" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Shirynl" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shiryn</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
