@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>初来乍到，一无所知</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2025-01-27T16:01:13.169Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Shiryn</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo-next主页文章折叠</title>
+    <link href="http://example.com/2025/01/27/unfold-home/"/>
+    <id>http://example.com/2025/01/27/unfold-home/</id>
+    <published>2025-01-27T12:53:30.000Z</published>
+    <updated>2025-01-27T16:01:13.169Z</updated>
+    
+    
+    <summary type="html">hexo-next主题会在主页显示完整文章，使得主页十分冗长，这篇文章介绍了如何折叠主页文章的方法</summary>
+    
+    
+    
+    
+    <category term="hexo-next" scheme="http://example.com/tags/hexo-next/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo &amp; Typora 实现图片插入</title>
+    <link href="http://example.com/2025/01/25/Image-Test/"/>
+    <id>http://example.com/2025/01/25/Image-Test/</id>
+    <published>2025-01-25T09:44:23.000Z</published>
+    <updated>2025-01-27T16:01:09.506Z</updated>
+    
+    
+    <summary type="html">在使用Typora + Hexo + GitHub 搭建个人博客时，若直接粘贴图片到文章中，会导致图片无法正常显示。这篇文章通过配置 Hexo（开启 post_asset_folder 选项）、在 Typora 中设置相对路径插入图片、安装并启用 hexo-asset-img 插件实现自动转换引用语法，即可在本地、Typora 以及线上 GitHub Pages 中都正常显示图片。</summary>
+    
+    
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My First Blog</title>
+    <link href="http://example.com/2025/01/24/My-First-Blog/"/>
+    <id>http://example.com/2025/01/24/My-First-Blog/</id>
+    <published>2025-01-24T11:27:58.000Z</published>
+    <updated>2025-01-24T12:37:42.750Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;1-你好！&quot;&gt;&lt;a href=&quot;#1-你好！&quot; class=&quot;headerlink&quot; title=&quot;1 你好！&quot;&gt;&lt;/a&gt;1 你好！&lt;/h2&gt;&lt;p&gt;这是第一篇Blog！&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
