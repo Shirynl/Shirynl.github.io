@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>My First Blog</title>
+    <url>/2025/01/24/My-First-Blog/</url>
+    <content><![CDATA[<h2 id="1-你好！"><a href="#1-你好！" class="headerlink" title="1 你好！"></a>1 你好！</h2><p>这是第一篇Blog！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>hexo &amp; Typora 实现图片插入</title>
     <url>/2025/01/25/Image-Test/</url>
     <content><![CDATA[<h3 id="一、问题引出"><a href="#一、问题引出" class="headerlink" title="一、问题引出"></a>一、问题引出</h3><p>使用hexo框架结合github搭建Blog网站，在本地使用Typora写md文档，在hexo s本地部署和hexo d上传到Github使图片无法正常显示。</p>
@@ -98,9 +104,11 @@
       </tags>
   </entry>
   <entry>
-    <title>My First Blog</title>
-    <url>/2025/01/24/My-First-Blog/</url>
-    <content><![CDATA[<h2 id="1-你好！"><a href="#1-你好！" class="headerlink" title="1 你好！"></a>1 你好！</h2><p>这是第一篇Blog！</p>
-]]></content>
+    <title>hexo-next &amp; giscus 评论测试</title>
+    <url>/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>hexo-next</tag>
+      </tags>
   </entry>
 </search>
