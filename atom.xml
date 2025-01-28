@@ -3,11 +3,11 @@
   <title>初来乍到，一无所知</title>
   
   
-  <link href="https://shirynl.github.io/project/atom.xml" rel="self"/>
+  <link href="https://example.com/atom.xml" rel="self"/>
   
-  <link href="https://shirynl.github.io/project/"/>
+  <link href="https://example.com/"/>
   <updated>2025-01-27T17:12:09.061Z</updated>
-  <id>https://shirynl.github.io/project/</id>
+  <id>https://example.com/</id>
   
   <author>
     <name>Shiryn</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>hexo-next &amp; giscus 评论测试</title>
-    <link href="https://shirynl.github.io/project/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/"/>
-    <id>https://shirynl.github.io/project/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/</id>
+    <link href="https://example.com/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/"/>
+    <id>https://example.com/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/</id>
     <published>2025-01-27T17:11:39.000Z</published>
     <updated>2025-01-27T17:12:09.061Z</updated>
     
@@ -27,14 +27,14 @@
     
     
     
-    <category term="hexo-next" scheme="https://shirynl.github.io/project/tags/hexo-next/"/>
+    <category term="hexo-next" scheme="https://example.com/tags/hexo-next/"/>
     
   </entry>
   
   <entry>
     <title>hexo-next主页文章折叠</title>
-    <link href="https://shirynl.github.io/project/2025/01/27/unfold-home/"/>
-    <id>https://shirynl.github.io/project/2025/01/27/unfold-home/</id>
+    <link href="https://example.com/2025/01/27/unfold-home/"/>
+    <id>https://example.com/2025/01/27/unfold-home/</id>
     <published>2025-01-27T12:53:30.000Z</published>
     <updated>2025-01-28T03:21:18.287Z</updated>
     
@@ -49,14 +49,14 @@
     
     
     
-    <category term="hexo-next" scheme="https://shirynl.github.io/project/tags/hexo-next/"/>
+    <category term="hexo-next" scheme="https://example.com/tags/hexo-next/"/>
     
   </entry>
   
   <entry>
     <title>hexo &amp; Typora 实现图片插入</title>
-    <link href="https://shirynl.github.io/project/2025/01/25/Image-Test/"/>
-    <id>https://shirynl.github.io/project/2025/01/25/Image-Test/</id>
+    <link href="https://example.com/2025/01/25/Image-Test/"/>
+    <id>https://example.com/2025/01/25/Image-Test/</id>
     <published>2025-01-25T09:44:23.000Z</published>
     <updated>2025-01-27T16:01:09.506Z</updated>
     
@@ -66,14 +66,14 @@
     
     
     
-    <category term="hexo" scheme="https://shirynl.github.io/project/tags/hexo/"/>
+    <category term="hexo" scheme="https://example.com/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>My First Blog</title>
-    <link href="https://shirynl.github.io/project/2025/01/24/My-First-Blog/"/>
-    <id>https://shirynl.github.io/project/2025/01/24/My-First-Blog/</id>
+    <link href="https://example.com/2025/01/24/My-First-Blog/"/>
+    <id>https://example.com/2025/01/24/My-First-Blog/</id>
     <published>2025-01-24T11:27:58.000Z</published>
     <updated>2025-01-27T17:12:14.352Z</updated>
     
