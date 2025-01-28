@@ -191,7 +191,8 @@
 <li>按照Giscus生成的配置文件，填入对应的参数，注意去掉引号<code>&quot;&quot;</code>和<code>data-</code></li>
 </ol>
 <p><font color='red'>注意直接在配置文件末尾加入上述代码，而不是在<code>comments:</code>后面添加</font></p>
-<h1 id="四、实现效果"><a href="#四、实现效果" class="headerlink" title="四、实现效果"></a>四、实现效果</h1>]]></content>
+<h1 id="四、实现效果"><a href="#四、实现效果" class="headerlink" title="四、实现效果"></a>四、实现效果</h1>
+]]></content>
       <tags>
         <tag>hexo-next</tag>
       </tags>

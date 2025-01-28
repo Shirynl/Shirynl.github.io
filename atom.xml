@@ -6,7 +6,7 @@
   <link href="https://example.com/atom.xml" rel="self"/>
   
   <link href="https://example.com/"/>
-  <updated>2025-01-28T07:19:09.912Z</updated>
+  <updated>2025-01-28T07:20:01.521Z</updated>
   <id>https://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://example.com/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/"/>
     <id>https://example.com/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/</id>
     <published>2025-01-27T17:11:39.000Z</published>
-    <updated>2025-01-28T07:19:09.912Z</updated>
+    <updated>2025-01-28T07:20:01.521Z</updated>
     
     
     <summary type="html">&lt;p&gt;本文介绍了在Hexo框架的Next主题中添加Giscus评论系统的具体步骤。&lt;/p&gt;
