@@ -1,6 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo-next &amp; giscus 评论测试</title>
+    <url>/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p>本文介绍了在Hexo框架的Next主题中添加Giscus评论系统的具体步骤。</p>
+<blockquote>
+<p>hexo版本：7.3.0  </p>
+<p>next版本：8.22.0</p>
+</blockquote>
+<p><strong>版本查看</strong></p>
+<p>hexo：在博客根目录下启动命令行，输入<code>hexo --version</code></p>
+<p>next：在主题文件夹<code>.\themes\next</code>下打开文件<code>package.json</code>,查看字段<code>version</code></p>
+<h1 id="一、Github配置"><a href="#一、Github配置" class="headerlink" title="一、Github配置"></a>一、Github配置</h1><blockquote>
+<ol>
+<li>你的仓库是公开的（public），否则访客将无法查看 discussion。</li>
+<li><strong>giscus app 已安装</strong>，否则访客将无法评论和回应。</li>
+<li>已在你的仓库中<strong>启用Discussions 功能</strong>。</li>
+</ol>
+</blockquote>
+<h2 id="1-公开Github仓库"><a href="#1-公开Github仓库" class="headerlink" title="1. 公开Github仓库"></a>1. 公开Github仓库</h2><p>参考GIthub文档：<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#making-a-repository-public">设置仓库可见性 - GitHub Docs</a></p>
+<ol>
+<li>打开博客所在Github仓库（Repositories）<code>https://github.com/用户名/用户名.github.io)</code></li>
+<li>在设置界面(Settings)的General下页面</li>
+<li>拉到最下面的Danger Zone部分（红色框）</li>
+</ol>
+<img src="/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/image-20250128145900671.png" class="" title="image-20250128145900671">
+
+<ol start="4">
+<li>将Change repository visibility设置为public（公开）</li>
+</ol>
+<h2 id="2-安装giscus-app"><a href="#2-安装giscus-app" class="headerlink" title="2. 安装giscus app"></a>2. 安装giscus app</h2><p>点击链接安装：<a href="https://github.com/apps/giscus">GitHub Apps - giscus</a></p>
+<img src="/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/image-20250128150301047.png" class="" title="image-20250128150301047">
+
+
+
+<h2 id="3-启用Discussions-功能"><a href="#3-启用Discussions-功能" class="headerlink" title="3. 启用Discussions 功能"></a>3. 启用Discussions 功能</h2><p>参考：<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository">Enabling or disabling GitHub Discussions for a repository - GitHub Docs</a></p>
+<ol>
+<li><p>导航到Github仓库主页，点击Settings（设置）</p>
+</li>
+<li><p>找到Features部分，选择Discussions</p>
+<img src="/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/image-20250128150557149.png" class="" title="image-20250128150557149"></li>
+</ol>
+<h1 id="二、Giscus配置"><a href="#二、Giscus配置" class="headerlink" title="二、Giscus配置"></a>二、Giscus配置</h1><h2 id="1-注册Giscus并获取配置"><a href="#1-注册Giscus并获取配置" class="headerlink" title="1. 注册Giscus并获取配置"></a>1. 注册Giscus并获取配置</h2><ol>
+<li><p>访问Giscus的<a href="https://giscus.app/zh-CN">官方网站</a></p>
+</li>
+<li><p>配置Giscus相关设置，配置完后在<code>启用giscus</code>处自动生成配置代码</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;https://giscus.app/client.js&quot;</span></span><br><span class="line">        data-repo=<span class="string">&quot;[在此输入仓库]&quot;</span></span><br><span class="line">        data-repo-id=<span class="string">&quot;[在此输入仓库 ID]&quot;</span></span><br><span class="line">        data-category=<span class="string">&quot;[在此输入分类名]&quot;</span></span><br><span class="line">        data-category-id=<span class="string">&quot;[在此输入分类 ID]&quot;</span></span><br><span class="line">        data-mapping=<span class="string">&quot;pathname&quot;</span></span><br><span class="line">        data-strict=<span class="string">&quot;0&quot;</span></span><br><span class="line">        data-reactions-enabled=<span class="string">&quot;1&quot;</span></span><br><span class="line">        data-emit-metadata=<span class="string">&quot;0&quot;</span></span><br><span class="line">        data-input-position=<span class="string">&quot;bottom&quot;</span></span><br><span class="line">        data-theme=<span class="string">&quot;preferred_color_scheme&quot;</span></span><br><span class="line">        data-lang=<span class="string">&quot;zh-CN&quot;</span></span><br><span class="line">        crossorigin=<span class="string">&quot;anonymous&quot;</span></span><br><span class="line">        <span class="keyword">async</span>&gt;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="三、Hexo-next配置"><a href="#三、Hexo-next配置" class="headerlink" title="三、Hexo-next配置"></a>三、Hexo-next配置</h1><h2 id="1-安装hexo-next-giscus插件"><a href="#1-安装hexo-next-giscus插件" class="headerlink" title="1. 安装hexo-next-giscus插件"></a>1. 安装hexo-next-giscus插件</h2><p>在hexo博客根目录打开命令行，执行以下命令，安装插件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-next-giscus --save</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-编辑Next主题配置文件"><a href="#2-编辑Next主题配置文件" class="headerlink" title="2. 编辑Next主题配置文件"></a>2. 编辑Next主题配置文件</h2><ol>
+<li><p>在hexo根目录下，打开主题配置文件<code>.\themes\next\_config.yml</code></p>
+</li>
+<li><p>添加以下代码：</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">giscus:</span><br><span class="line">  enable: true</span><br><span class="line">  repo: 在此输入仓库名</span><br><span class="line">  repo_id: 在此输入仓库 ID</span><br><span class="line">  category: 在此输入分类名</span><br><span class="line">  category_id: 在此输入分类 ID</span><br><span class="line">  mapping: title</span><br><span class="line">  reactions_enabled: 1</span><br><span class="line">  emit_metadata: 0</span><br><span class="line">  input_position: bottom</span><br><span class="line">  lang: zh-CN</span><br><span class="line">  loading: lazy</span><br><span class="line">  crossorigin: anonymous</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>按照Giscus生成的配置文件，填入对应的参数，注意去掉引号<code>&quot;&quot;</code>和<code>data-</code></li>
+</ol>
+<p><font color='red'>注意直接在配置文件末尾加入上述代码，而不是在<code>comments:</code>后面添加</font></p>
+<h1 id="四、实现效果"><a href="#四、实现效果" class="headerlink" title="四、实现效果"></a>四、实现效果</h1><img src="/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/image-20250128151958595.png" class="" title="image-20250128151958595">
+]]></content>
+      <categories>
+        <category>hexo博客搭建</category>
+      </categories>
+      <tags>
+        <tag>hexo-next</tag>
+        <tag>hexo</tag>
+        <tag>giscus</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>My First Blog</title>
+    <url>/2025/01/24/My-First-Blog/</url>
+    <content><![CDATA[<h2 id="1-你好！"><a href="#1-你好！" class="headerlink" title="1 你好！"></a>1 你好！</h2><p>这是第一篇Blog！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>hexo &amp; Typora 实现图片插入</title>
     <url>/2025/01/25/Image-Test/</url>
     <content><![CDATA[<h3 id="一、问题引出"><a href="#一、问题引出" class="headerlink" title="一、问题引出"></a>一、问题引出</h3><p>使用hexo框架结合github搭建Blog网站，在本地使用Typora写md文档，在hexo s本地部署和hexo d上传到Github使图片无法正常显示。</p>
@@ -85,8 +166,12 @@
 </li>
 </ol>
 ]]></content>
+      <categories>
+        <category>hexo博客搭建</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
+        <tag>Typora</tag>
       </tags>
   </entry>
   <entry>
@@ -123,84 +208,12 @@
 <p>实现效果：</p>
 <img src="/2025/01/27/unfold-home/image-20250128111938237.png" class="" title="image-20250128111938237">
 ]]></content>
+      <categories>
+        <category>hexo博客搭建</category>
+      </categories>
       <tags>
         <tag>hexo-next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>My First Blog</title>
-    <url>/2025/01/24/My-First-Blog/</url>
-    <content><![CDATA[<h2 id="1-你好！"><a href="#1-你好！" class="headerlink" title="1 你好！"></a>1 你好！</h2><p>这是第一篇Blog！</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>hexo-next &amp; giscus 评论测试</title>
-    <url>/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p>本文介绍了在Hexo框架的Next主题中添加Giscus评论系统的具体步骤。</p>
-<blockquote>
-<p>hexo版本：7.3.0  </p>
-<p>next版本：8.22.0</p>
-</blockquote>
-<p><strong>版本查看</strong></p>
-<p>hexo：在博客根目录下启动命令行，输入<code>hexo --version</code></p>
-<p>next：在主题文件夹<code>.\themes\next</code>下打开文件<code>package.json</code>,查看字段<code>version</code></p>
-<h1 id="一、Github配置"><a href="#一、Github配置" class="headerlink" title="一、Github配置"></a>一、Github配置</h1><blockquote>
-<ol>
-<li>你的仓库是公开的（public），否则访客将无法查看 discussion。</li>
-<li><strong>giscus app 已安装</strong>，否则访客将无法评论和回应。</li>
-<li>已在你的仓库中<strong>启用Discussions 功能</strong>。</li>
-</ol>
-</blockquote>
-<h2 id="1-公开Github仓库"><a href="#1-公开Github仓库" class="headerlink" title="1. 公开Github仓库"></a>1. 公开Github仓库</h2><p>参考GIthub文档：<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#making-a-repository-public">设置仓库可见性 - GitHub Docs</a></p>
-<ol>
-<li>打开博客所在Github仓库（Repositories）<code>https://github.com/用户名/用户名.github.io)</code></li>
-<li>在设置界面(Settings)的General下页面</li>
-<li>拉到最下面的Danger Zone部分（红色框）</li>
-</ol>
-<img src="/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/image-20250128145900671.png" class="" title="image-20250128145900671">
-
-<ol start="4">
-<li>将Change repository visibility设置为public（公开）</li>
-</ol>
-<h2 id="2-安装giscus-app"><a href="#2-安装giscus-app" class="headerlink" title="2. 安装giscus app"></a>2. 安装giscus app</h2><p>点击链接安装：<a href="https://github.com/apps/giscus">GitHub Apps - giscus</a></p>
-<img src="/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/image-20250128150301047.png" class="" title="image-20250128150301047">
-
-
-
-<h2 id="3-启用Discussions-功能"><a href="#3-启用Discussions-功能" class="headerlink" title="3. 启用Discussions 功能"></a>3. 启用Discussions 功能</h2><p>参考：<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions-for-a-repository">Enabling or disabling GitHub Discussions for a repository - GitHub Docs</a></p>
-<ol>
-<li><p>导航到Github仓库主页，点击Settings（设置）</p>
-</li>
-<li><p>找到Features部分，选择Discussions</p>
-<img src="/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/image-20250128150557149.png" class="" title="image-20250128150557149"></li>
-</ol>
-<h1 id="二、Giscus配置"><a href="#二、Giscus配置" class="headerlink" title="二、Giscus配置"></a>二、Giscus配置</h1><h2 id="1-注册Giscus并获取配置"><a href="#1-注册Giscus并获取配置" class="headerlink" title="1. 注册Giscus并获取配置"></a>1. 注册Giscus并获取配置</h2><ol>
-<li><p>访问Giscus的<a href="https://giscus.app/zh-CN">官方网站</a></p>
-</li>
-<li><p>配置Giscus相关设置，配置完后在<code>启用giscus</code>处自动生成配置代码</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;https://giscus.app/client.js&quot;</span></span><br><span class="line">        data-repo=<span class="string">&quot;[在此输入仓库]&quot;</span></span><br><span class="line">        data-repo-id=<span class="string">&quot;[在此输入仓库 ID]&quot;</span></span><br><span class="line">        data-category=<span class="string">&quot;[在此输入分类名]&quot;</span></span><br><span class="line">        data-category-id=<span class="string">&quot;[在此输入分类 ID]&quot;</span></span><br><span class="line">        data-mapping=<span class="string">&quot;pathname&quot;</span></span><br><span class="line">        data-strict=<span class="string">&quot;0&quot;</span></span><br><span class="line">        data-reactions-enabled=<span class="string">&quot;1&quot;</span></span><br><span class="line">        data-emit-metadata=<span class="string">&quot;0&quot;</span></span><br><span class="line">        data-input-position=<span class="string">&quot;bottom&quot;</span></span><br><span class="line">        data-theme=<span class="string">&quot;preferred_color_scheme&quot;</span></span><br><span class="line">        data-lang=<span class="string">&quot;zh-CN&quot;</span></span><br><span class="line">        crossorigin=<span class="string">&quot;anonymous&quot;</span></span><br><span class="line">        <span class="keyword">async</span>&gt;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h1 id="三、Hexo-next配置"><a href="#三、Hexo-next配置" class="headerlink" title="三、Hexo-next配置"></a>三、Hexo-next配置</h1><h2 id="1-安装hexo-next-giscus插件"><a href="#1-安装hexo-next-giscus插件" class="headerlink" title="1. 安装hexo-next-giscus插件"></a>1. 安装hexo-next-giscus插件</h2><p>在hexo博客根目录打开命令行，执行以下命令，安装插件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-next-giscus --save</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2-编辑Next主题配置文件"><a href="#2-编辑Next主题配置文件" class="headerlink" title="2. 编辑Next主题配置文件"></a>2. 编辑Next主题配置文件</h2><ol>
-<li><p>在hexo根目录下，打开主题配置文件<code>.\themes\next\_config.yml</code></p>
-</li>
-<li><p>添加以下代码：</p>
-</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">giscus:</span><br><span class="line">  enable: true</span><br><span class="line">  repo: 在此输入仓库名</span><br><span class="line">  repo_id: 在此输入仓库 ID</span><br><span class="line">  category: 在此输入分类名</span><br><span class="line">  category_id: 在此输入分类 ID</span><br><span class="line">  mapping: title</span><br><span class="line">  reactions_enabled: 1</span><br><span class="line">  emit_metadata: 0</span><br><span class="line">  input_position: bottom</span><br><span class="line">  lang: zh-CN</span><br><span class="line">  loading: lazy</span><br><span class="line">  crossorigin: anonymous</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>按照Giscus生成的配置文件，填入对应的参数，注意去掉引号<code>&quot;&quot;</code>和<code>data-</code></li>
-</ol>
-<p><font color='red'>注意直接在配置文件末尾加入上述代码，而不是在<code>comments:</code>后面添加</font></p>
-<h1 id="四、实现效果"><a href="#四、实现效果" class="headerlink" title="四、实现效果"></a>四、实现效果</h1><img src="/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/image-20250128151958595.png" class="" title="image-20250128151958595">
-]]></content>
-      <tags>
-        <tag>hexo-next</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
 </search>
