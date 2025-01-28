@@ -128,6 +128,12 @@
       </tags>
   </entry>
   <entry>
+    <title>My First Blog</title>
+    <url>/2025/01/24/My-First-Blog/</url>
+    <content><![CDATA[<h2 id="1-你好！"><a href="#1-你好！" class="headerlink" title="1 你好！"></a>1 你好！</h2><p>这是第一篇Blog！</p>
+]]></content>
+  </entry>
+  <entry>
     <title>hexo-next &amp; giscus 评论测试</title>
     <url>/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<p>本文介绍了在Hexo框架的Next主题中添加Giscus评论系统的具体步骤。</p>
@@ -151,13 +157,13 @@
 <li>在设置界面(Settings)的General下页面</li>
 <li>拉到最下面的Danger Zone部分（红色框）</li>
 </ol>
-
+<img src="/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/image-20250128145900671.png" class="" title="image-20250128145900671">
 
 <ol start="4">
 <li>将Change repository visibility设置为public（公开）</li>
 </ol>
 <h2 id="2-安装giscus-app"><a href="#2-安装giscus-app" class="headerlink" title="2. 安装giscus app"></a>2. 安装giscus app</h2><p>点击链接安装：<a href="https://github.com/apps/giscus">GitHub Apps - giscus</a></p>
-
+<img src="/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/image-20250128150301047.png" class="" title="image-20250128150301047">
 
 
 
@@ -166,7 +172,7 @@
 <li><p>导航到Github仓库主页，点击Settings（设置）</p>
 </li>
 <li><p>找到Features部分，选择Discussions</p>
-</li>
+<img src="/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/image-20250128150557149.png" class="" title="image-20250128150557149"></li>
 </ol>
 <h1 id="二、Giscus配置"><a href="#二、Giscus配置" class="headerlink" title="二、Giscus配置"></a>二、Giscus配置</h1><h2 id="1-注册Giscus并获取配置"><a href="#1-注册Giscus并获取配置" class="headerlink" title="1. 注册Giscus并获取配置"></a>1. 注册Giscus并获取配置</h2><ol>
 <li><p>访问Giscus的<a href="https://giscus.app/zh-CN">官方网站</a></p>
@@ -191,16 +197,10 @@
 <li>按照Giscus生成的配置文件，填入对应的参数，注意去掉引号<code>&quot;&quot;</code>和<code>data-</code></li>
 </ol>
 <p><font color='red'>注意直接在配置文件末尾加入上述代码，而不是在<code>comments:</code>后面添加</font></p>
-<h1 id="四、实现效果"><a href="#四、实现效果" class="headerlink" title="四、实现效果"></a>四、实现效果</h1>
+<h1 id="四、实现效果"><a href="#四、实现效果" class="headerlink" title="四、实现效果"></a>四、实现效果</h1><img src="/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/image-20250128151958595.png" class="" title="image-20250128151958595">
 ]]></content>
       <tags>
         <tag>hexo-next</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>My First Blog</title>
-    <url>/2025/01/24/My-First-Blog/</url>
-    <content><![CDATA[<h2 id="1-你好！"><a href="#1-你好！" class="headerlink" title="1 你好！"></a>1 你好！</h2><p>这是第一篇Blog！</p>
-]]></content>
   </entry>
 </search>
