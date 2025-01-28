@@ -3,11 +3,11 @@
   <title>初来乍到，一无所知</title>
   
   
-  <link href="http://shirynl.github.io/atom.xml" rel="self"/>
+  <link href="http://shirynl.github.io/project/atom.xml" rel="self"/>
   
-  <link href="http://shirynl.github.io/"/>
+  <link href="http://shirynl.github.io/project/"/>
   <updated>2025-01-27T17:12:09.061Z</updated>
-  <id>http://shirynl.github.io/</id>
+  <id>http://shirynl.github.io/project/</id>
   
   <author>
     <name>Shiryn</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>hexo-next &amp; giscus 评论测试</title>
-    <link href="http://shirynl.github.io/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/"/>
-    <id>http://shirynl.github.io/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/</id>
+    <link href="http://shirynl.github.io/project/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/"/>
+    <id>http://shirynl.github.io/project/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/</id>
     <published>2025-01-27T17:11:39.000Z</published>
     <updated>2025-01-27T17:12:09.061Z</updated>
     
@@ -27,36 +27,39 @@
     
     
     
-    <category term="hexo-next" scheme="http://shirynl.github.io/tags/hexo-next/"/>
+    <category term="hexo-next" scheme="http://shirynl.github.io/project/tags/hexo-next/"/>
     
   </entry>
   
   <entry>
     <title>hexo-next主页文章折叠</title>
-    <link href="http://shirynl.github.io/2025/01/27/unfold-home/"/>
-    <id>http://shirynl.github.io/2025/01/27/unfold-home/</id>
+    <link href="http://shirynl.github.io/project/2025/01/27/unfold-home/"/>
+    <id>http://shirynl.github.io/project/2025/01/27/unfold-home/</id>
     <published>2025-01-27T12:53:30.000Z</published>
     <updated>2025-01-28T03:21:18.287Z</updated>
     
     
+      
+      
     <summary type="html">&lt;p&gt;hexo-next主题会在主页显示完整文章，使得主页十分冗长，这篇文章介绍了如何折叠主页文章的方法。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;hexo版本：7.3.0&lt;/p&gt;
 &lt;p&gt;next版本：8.22.0&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;1-方法一&quot;&gt;&lt;a href=&quot;#1-方法一&quot; class=&quot;headerlink&quot; title=&quot;1. 方法一&quot;&gt;&lt;/a&gt;1. 方法一&lt;/h3&gt;</summary>
+&lt;h3 id=&quot;1-方法一&quot;</summary>
+      
     
     
     
     
-    <category term="hexo-next" scheme="http://shirynl.github.io/tags/hexo-next/"/>
+    <category term="hexo-next" scheme="http://shirynl.github.io/project/tags/hexo-next/"/>
     
   </entry>
   
   <entry>
     <title>hexo &amp; Typora 实现图片插入</title>
-    <link href="http://shirynl.github.io/2025/01/25/Image-Test/"/>
-    <id>http://shirynl.github.io/2025/01/25/Image-Test/</id>
+    <link href="http://shirynl.github.io/project/2025/01/25/Image-Test/"/>
+    <id>http://shirynl.github.io/project/2025/01/25/Image-Test/</id>
     <published>2025-01-25T09:44:23.000Z</published>
     <updated>2025-01-27T16:01:09.506Z</updated>
     
@@ -66,14 +69,14 @@
     
     
     
-    <category term="hexo" scheme="http://shirynl.github.io/tags/hexo/"/>
+    <category term="hexo" scheme="http://shirynl.github.io/project/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>My First Blog</title>
-    <link href="http://shirynl.github.io/2025/01/24/My-First-Blog/"/>
-    <id>http://shirynl.github.io/2025/01/24/My-First-Blog/</id>
+    <link href="http://shirynl.github.io/project/2025/01/24/My-First-Blog/"/>
+    <id>http://shirynl.github.io/project/2025/01/24/My-First-Blog/</id>
     <published>2025-01-24T11:27:58.000Z</published>
     <updated>2025-01-27T17:12:14.352Z</updated>
     
