@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://shirynl.github.io/project/2025/01/27/unfold-home/</loc>
+    <loc>https://shirynl.github.io/project/2025/01/27/unfold-home/</loc>
     
     <lastmod>2025-01-28</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://shirynl.github.io/project/2025/01/24/My-First-Blog/</loc>
+    <loc>https://shirynl.github.io/project/2025/01/24/My-First-Blog/</loc>
     
     <lastmod>2025-01-27</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://shirynl.github.io/project/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://shirynl.github.io/project/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/</loc>
     
     <lastmod>2025-01-27</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://shirynl.github.io/project/2025/01/25/Image-Test/</loc>
+    <loc>https://shirynl.github.io/project/2025/01/25/Image-Test/</loc>
     
     <lastmod>2025-01-27</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://shirynl.github.io/project/tags/index.html</loc>
+    <loc>https://shirynl.github.io/project/tags/index.html</loc>
     
     <lastmod>2025-01-24</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://shirynl.github.io/project/categories/index.html</loc>
+    <loc>https://shirynl.github.io/project/categories/index.html</loc>
     
     <lastmod>2025-01-24</lastmod>
     
@@ -57,7 +57,7 @@
   
 
   <url>
-    <loc>http://shirynl.github.io/project</loc>
+    <loc>https://shirynl.github.io/project</loc>
     <lastmod>2025-01-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -65,14 +65,14 @@
 
   
   <url>
-    <loc>http://shirynl.github.io/project/tags/hexo/</loc>
+    <loc>https://shirynl.github.io/project/tags/hexo/</loc>
     <lastmod>2025-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://shirynl.github.io/project/tags/hexo-next/</loc>
+    <loc>https://shirynl.github.io/project/tags/hexo-next/</loc>
     <lastmod>2025-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
