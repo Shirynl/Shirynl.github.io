@@ -7,6 +7,44 @@
 ]]></content>
   </entry>
   <entry>
+    <title>hexo-next主页文章折叠</title>
+    <url>/2025/01/27/unfold-home/</url>
+    <content><![CDATA[<p>hexo-next主题会在主页显示完整文章，使得主页十分冗长，这篇文章介绍了如何折叠主页文章的方法。</p>
+<blockquote>
+<p>hexo版本：7.3.0</p>
+<p>next版本：8.22.0</p>
+</blockquote>
+<h3 id="1-方法一"><a href="#1-方法一" class="headerlink" title="1. 方法一"></a>1. 方法一</h3><p>在文章折叠处的位置添加<code>&lt;!--more--&gt;</code>,即可折叠后面的文章，例如：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo-next主题会在主页显示完整文章，使得主页十分冗长，这篇文章介绍了如何折叠主页文章的方法。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### 1. 方法一</span></span><br><span class="line">在文章折叠处的位置添加`&lt;!--more--&gt;`,即可折叠后面的文章，例如：</span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">**实现效果**</span><br><span class="line">&#123;% asset_img image-20250128093956831.png image-20250128093956831 %&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">### 2. 方法二</span></span><br><span class="line">在文章顶部的`front-matter`中添加description字块</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>实现效果</strong></p>
+<img src="/2025/01/27/unfold-home/image-20250128093956831.png" class="" title="image-20250128093956831">
+
+<h3 id="2-方法二"><a href="#2-方法二" class="headerlink" title="2. 方法二"></a>2. 方法二</h3><p>在文章顶部的<code>front-matter</code>中添加description字块添加文章摘要，则在主页仅会显示摘要内容。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo-next主页文章折叠</span><br><span class="line"><span class="built_in">date</span>: 2025-01-27 20:53:30</span><br><span class="line">tags: hexo-next</span><br><span class="line">comments: <span class="literal">true</span></span><br><span class="line">description: hexo-next主题会在主页显示完整文章，使得主页十分冗长，这篇文章介绍了如何折叠主页文章的方法。</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p><strong>实现效果</strong></p>
+<img src="/2025/01/27/unfold-home/image-20250128094326597.png" class="" title="image-20250128094326597">
+
+
+
+<h3 id="3-方法三"><a href="#3-方法三" class="headerlink" title="3. 方法三"></a>3. 方法三</h3><p>安装hexo-excerpt插件：在博客根目录下打开命令行，运行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-excerpt --save</span><br></pre></td></tr></table></figure>
+
+<p>在站点配置文件<code>_config.yml</code>中添加以下代码：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">excerpt:</span></span><br><span class="line">  <span class="attr">depth:</span> <span class="number">3</span>                <span class="comment"># 摘录的深度，即生成的摘录内容所包含的层级标题数量</span></span><br><span class="line">  <span class="attr">excerpt_excludes:</span> []    <span class="comment"># 不生成摘录的页面列表</span></span><br><span class="line">  <span class="attr">more_excludes:</span> []       <span class="comment"># 不使用&lt;!-- more --&gt;标签的页面列表</span></span><br><span class="line">  <span class="attr">hideWholePostExcerpts:</span> <span class="literal">true</span> <span class="comment"># 是否隐藏全文摘录（当文章较短时，可能不需要摘录）</span></span><br></pre></td></tr></table></figure>
+
+<p>在主题配置文件<code>.\themes\next\_config.yml</code>中，启用摘录描述和阅读全文按钮选项:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">excerpt_description:</span> <span class="literal">true</span>  <span class="comment"># 是否在摘录下方显示文章描述</span></span><br><span class="line"><span class="attr">read_more_btn:</span> <span class="literal">true</span>        <span class="comment"># 是否显示阅读全文按钮</span></span><br></pre></td></tr></table></figure>
+
+<p>实现效果：</p>
+<img src="/2025/01/27/unfold-home/image-20250128111938237.png" class="" title="image-20250128111938237">
+]]></content>
+      <tags>
+        <tag>hexo-next</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo &amp; Typora 实现图片插入</title>
     <url>/2025/01/25/Image-Test/</url>
     <content><![CDATA[<h3 id="一、问题引出"><a href="#一、问题引出" class="headerlink" title="一、问题引出"></a>一、问题引出</h3><p>使用hexo框架结合github搭建Blog网站，在本地使用Typora写md文档，在hexo s本地部署和hexo d上传到Github使图片无法正常显示。</p>
@@ -93,44 +131,6 @@
 ]]></content>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo-next主页文章折叠</title>
-    <url>/2025/01/27/unfold-home/</url>
-    <content><![CDATA[<p>hexo-next主题会在主页显示完整文章，使得主页十分冗长，这篇文章介绍了如何折叠主页文章的方法。</p>
-<blockquote>
-<p>hexo版本：7.3.0</p>
-<p>next版本：8.22.0</p>
-</blockquote>
-<h3 id="1-方法一"><a href="#1-方法一" class="headerlink" title="1. 方法一"></a>1. 方法一</h3><p>在文章折叠处的位置添加<code>&lt;!--more--&gt;</code>,即可折叠后面的文章，例如：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo-next主题会在主页显示完整文章，使得主页十分冗长，这篇文章介绍了如何折叠主页文章的方法。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### 1. 方法一</span></span><br><span class="line">在文章折叠处的位置添加`&lt;!--more--&gt;`,即可折叠后面的文章，例如：</span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">**实现效果**</span><br><span class="line">&#123;% asset_img image-20250128093956831.png image-20250128093956831 %&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">### 2. 方法二</span></span><br><span class="line">在文章顶部的`front-matter`中添加description字块</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><strong>实现效果</strong></p>
-<img src="/2025/01/27/unfold-home/image-20250128093956831.png" class="" title="image-20250128093956831">
-
-<h3 id="2-方法二"><a href="#2-方法二" class="headerlink" title="2. 方法二"></a>2. 方法二</h3><p>在文章顶部的<code>front-matter</code>中添加description字块添加文章摘要，则在主页仅会显示摘要内容。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo-next主页文章折叠</span><br><span class="line"><span class="built_in">date</span>: 2025-01-27 20:53:30</span><br><span class="line">tags: hexo-next</span><br><span class="line">comments: <span class="literal">true</span></span><br><span class="line">description: hexo-next主题会在主页显示完整文章，使得主页十分冗长，这篇文章介绍了如何折叠主页文章的方法。</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p><strong>实现效果</strong></p>
-<img src="/2025/01/27/unfold-home/image-20250128094326597.png" class="" title="image-20250128094326597">
-
-
-
-<h3 id="3-方法三"><a href="#3-方法三" class="headerlink" title="3. 方法三"></a>3. 方法三</h3><p>安装hexo-excerpt插件：在博客根目录下打开命令行，运行以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-excerpt --save</span><br></pre></td></tr></table></figure>
-
-<p>在站点配置文件<code>_config.yml</code>中添加以下代码：</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">excerpt:</span></span><br><span class="line">  <span class="attr">depth:</span> <span class="number">3</span>                <span class="comment"># 摘录的深度，即生成的摘录内容所包含的层级标题数量</span></span><br><span class="line">  <span class="attr">excerpt_excludes:</span> []    <span class="comment"># 不生成摘录的页面列表</span></span><br><span class="line">  <span class="attr">more_excludes:</span> []       <span class="comment"># 不使用&lt;!-- more --&gt;标签的页面列表</span></span><br><span class="line">  <span class="attr">hideWholePostExcerpts:</span> <span class="literal">true</span> <span class="comment"># 是否隐藏全文摘录（当文章较短时，可能不需要摘录）</span></span><br></pre></td></tr></table></figure>
-
-<p>在主题配置文件<code>.\themes\next\_config.yml</code>中，启用摘录描述和阅读全文按钮选项:</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">excerpt_description:</span> <span class="literal">true</span>  <span class="comment"># 是否在摘录下方显示文章描述</span></span><br><span class="line"><span class="attr">read_more_btn:</span> <span class="literal">true</span>        <span class="comment"># 是否显示阅读全文按钮</span></span><br></pre></td></tr></table></figure>
-
-<p>实现效果：</p>
-<img src="/2025/01/27/unfold-home/image-20250128111938237.png" class="" title="image-20250128111938237">
-]]></content>
-      <tags>
-        <tag>hexo-next</tag>
       </tags>
   </entry>
   <entry>
